@@ -1,3 +1,6 @@
+﻿As an **openHABian end user**, please check out the official openHAB documentation:  
+🡺 https://www.openhab.org/docs/installation/openhabian.html
+
 # openHABian - Hassle-free openHAB Setup
 
 Setting up a fully working Linux system with all needed packages and openHAB recommendations is a **boring task** taking quite some time and **Linux newcomers** shouldn't worry about these technical details.
@@ -12,15 +15,28 @@ The project provides two things:
 
 ## Installation and Setup
 
-Please check the [official documentation article](http://docs.openhab.org/installation/openhabian.html) to learn about openHABian and please visit and subscribe to our very active [community forum thread](https://community.openhab.org/t/13379).
+Please check the [official documentation article](https://www.openhab.org/docs/installation/openhabian.html) to learn about openHABian and please visit and subscribe to our very active [community forum thread](https://community.openhab.org/t/13379).
 
 Enjoy openHABian and the wondrous world of openHAB!!
+
+![](https://www.openhab.org/assets/img/openHABian-config.0c2550f6.png)
 
 ----
 
 ## Development
 
-For image building, please see the `build-....sh` scripts to get an idea of the process.
+[![Shellcheck Status](https://travis-ci.com/openhab/openhabian.svg?branch=master)](https://travis-ci.com/openhab/openhabian) (Shellcheck)
+
+For image building, please see the `build.sh` scripts to get an idea of the process.
+```
+Simply put:
+
+$ sudo bash build.sh platform
+$ sudo bash build.sh platform dev-git # Injecting current local branch as remote endpoint (eg. fork)
+$ sudo bash build.sh platform dev-url branch url # Injecting custom branch an repository
+
+where platform can be: rpi, pine64
+```
 
 The RPi image is based on the [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian) standard image,
 the Pine64 image is based on [build-pine64-image](https://github.com/longsleep/build-pine64-image).
